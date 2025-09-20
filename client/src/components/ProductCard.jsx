@@ -26,7 +26,7 @@ const {currency,addToCart, removeFromCart,cartItems,navigate}=  useAppContext()
                 </div>
                 <div className="flex items-end justify-between mt-3">
                     <p className="md:text-xl text-base font-medium text-primary">
-                        ${product.offerPrice} <span className="text-primary/60 md:text-sm text-xs line-through">${product.price}</span>
+                        {currency}{product.offerPrice} <span className="text-primary/60 md:text-sm text-xs line-through">{currency}{product.price}</span>
                     </p>
                     <div onClick={(e) => {e.stopPropagation();}} className="text-primary">
                         {!cartItems[product._id] ? (
